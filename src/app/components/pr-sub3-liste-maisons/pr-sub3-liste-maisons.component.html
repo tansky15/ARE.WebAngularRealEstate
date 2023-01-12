@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h1>Listes des Maisons</h1>
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let maison of Maisons" >
+
+      <img class="card-img-top" style="height: 200px;"
+       src="{{maison.code}}" alt="Pas d'image disponible">
+      <div class="card-body">
+        <h5 class="card-title">{{maison.titre}}</h5>
+        <p class="card-text">{{maison.description}}</p>
+        <hr>
+        <p class="card-text"><b>Agent: <u>{{maison.agent}}</u></b></p>
+        <p class="card-text"><b>Adresse :</b>{{maison.adresse}}</p>
+        <p class="card-text"><i><b>Prix : $</b></i>{{maison.prix}}</p>
+        <div class="text-center">
+          <a href="" routerLink="/liste-maisons/{{maison._id}}" class="btn btn-dark">Modifier</a>
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+

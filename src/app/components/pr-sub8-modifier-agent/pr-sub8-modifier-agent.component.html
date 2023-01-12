@@ -1,0 +1,45 @@
+<br>
+<h2 class="title" style="margin-bottom: 50px;text-align:center">Ajouter un courtier</h2>
+<form (ngSubmit)="updateAgent()" ngNativeValidate style="margin-bottom: 100px;">
+  <div  class="container">
+    <div class="row">
+     <div class="col-3"></div>
+
+      <div class="col-6">
+        <div class="submit-form">
+         <div class="form-group">
+            <label class="h3" for="nom">Nom Complet</label>
+            <input
+             class="form-control"
+              id="nom"
+              required
+              [(ngModel)]="currentAgent.nom"
+               name="nom" />
+          </div>
+
+          <div class="form-group">
+            <label class="h3" for="numero">Numero de telephone</label>
+            <input class="form-control"
+              id="numero"
+              required
+              [(ngModel)]="currentAgent.numero"
+              name="agent" />
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success">Modifier</button>
+          <button type="button" (click)="deleteAgent(currentAgent._id)"  class="btn btn-danger mr-2">Supprimer</button>
+        </div>
+      </div>
+     <div class="col-3"></div>
+    </div>
+  </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
